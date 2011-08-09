@@ -33,15 +33,21 @@ bindkey -s '\eu' '^Ucd ..; ls^M'
 # ===========================
 # Andrew Specific
 
-alias aklog_="aklog cs.cmu.edu"
+HOSTNAME=`hostname`
 
-export PATH=/afs/cs.cmu.edu/academic/class/15410-s11/bin:$PATH
+if [[ `expr match "$HOSTNAME" '.*andrew' ` -gt "0" ]]; then
 
-bindkey "^[[3~" delete-char
+    alias aklog_="aklog cs.cmu.edu"
 
-alias simics='make && simics4'
+    export PATH=/afs/cs.cmu.edu/academic/class/15410-s11/bin:$PATH
 
-export PYTHONSTARTUP=~/private/load_pyhist.py
+    bindkey "^[[3~" delete-char
+
+    alias simics='make && simics4'
+
+    export PYTHONSTARTUP=~/private/load_pyhist.py
+
+fi
 
 # ===========================
 
