@@ -3,7 +3,9 @@ alias pu='pushd'
 alias po='popd'
 
 # Basic directory operations
+alias ..='cd ..'
 alias ...='cd ../..'
+alias ....='cd ../../..'
 alias -- -='cd -'
 
 # Super user
@@ -21,4 +23,11 @@ alias ll='ls -l'
 alias sl=ls # often screw this up
 
 alias afind='ack-grep -il'
+
+# Programs
+
+alias py='python'
+alias sml='rlwrap sml'
+
+
 
