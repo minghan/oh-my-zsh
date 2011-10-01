@@ -28,6 +28,7 @@ alias afind='ack-grep -il'
 
 alias py='python'
 alias sml='rlwrap sml'
+alias pine='pine -i'
 
 
 
