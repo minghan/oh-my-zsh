@@ -47,8 +47,9 @@ if [[ `expr match "$HOSTNAME" '.*andrew' ` -gt "0" ]]; then
 
     export PYTHONSTARTUP=~/private/load_pyhist.py
 
+    export PYTHONPATH=$PYTHONPATH:~/eggs
+    export PATH=$PATH:~/eggs
 fi
 
 # ===========================
-
 
