@@ -31,7 +31,9 @@ export EDITOR="vim"
 # bindkey -s '\eu' '^Ucd ..; ls^M'
 
 # ===========================
-# Andrew Specific
+# Host Specific
+
+export PYTHONSTARTUP=~/.oh-my-zsh/load_pyhist.py
 
 HOSTNAME=`hostname`
 
@@ -45,14 +47,21 @@ if [[ $HOSTNAME =~ '.*andrew\.cmu\.edu' ]]; then
 
     alias simics='make && simics4'
 
+    # Override
     export PYTHONSTARTUP=~/private/load_pyhist.py
+
     export PYTHONPATH=$PYTHONPATH:~/eggs
     export PATH=$PATH:~/eggs
 
 elif [[ $HOSTNAME =~ '.*stanford\.edu' ]]; then
 
+elif [[ $HOSTNAME =~ '^hanworks$' ]]; then
+    export HADOOP_HOME="/home/minghan/apps/hadoop-0.20.2-cdh3u4"
+    export HBASE_HOME="/home/minghan/apps/hbase-0.90.6-cdh3u4"
+    # export PATH="$PATH:$HADOOP_HOME/bin"
+    export JAVA_HOME="/usr/lib/jvm/jdk1.6.0_32"
 else
-    export PYTHONSTARTUP=~/.oh-my-zsh/load_pyhist.py
+
 fi
 
 # ===========================
