@@ -28,16 +28,14 @@ export EDITOR="vim"
 # Useful keybindings
 
 # Meta-u to chdir to the parent directory
-bindkey -s '\eu' '^Ucd ..; ls^M'
-
-
+# bindkey -s '\eu' '^Ucd ..; ls^M'
 
 # ===========================
 # Andrew Specific
 
 HOSTNAME=`hostname`
 
-if [[ `expr match "$HOSTNAME" '.*andrew' ` -gt "0" ]]; then
+if [[ $HOSTNAME =~ '.*andrew\.cmu\.edu' ]]; then
 
     alias aklog_="aklog cs.cmu.edu"
 
@@ -48,9 +46,13 @@ if [[ `expr match "$HOSTNAME" '.*andrew' ` -gt "0" ]]; then
     alias simics='make && simics4'
 
     export PYTHONSTARTUP=~/private/load_pyhist.py
-
     export PYTHONPATH=$PYTHONPATH:~/eggs
     export PATH=$PATH:~/eggs
+
+elif [[ $HOSTNAME =~ '.*stanford\.edu' ]]; then
+
+else
+    export PYTHONSTARTUP=~/.oh-my-zsh/load_pyhist.py
 fi
 
 # ===========================
