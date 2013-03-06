@@ -3,6 +3,8 @@
 
 alias lsc='ls --hide="*.o" --hide="*.dep"'
 
+alias rake="noglob rake"
+
 alias git-reset-all="git reset --hard ; git clean -df ; git pull ; "
 alias git-addremove="git add . ; git add -u"
 
