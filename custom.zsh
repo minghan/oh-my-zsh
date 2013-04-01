@@ -62,6 +62,10 @@ elif [[ $HOSTNAME =~ '^hanworks$' ]]; then
     export HBASE_HOME="/home/minghan/apps/hbase-0.90.6-cdh3u4"
     # export PATH="$PATH:$HADOOP_HOME/bin"
     export JAVA_HOME="/usr/lib/jvm/jdk1.6.0_32"
+
+elif [[ $HOSTNAME =~ '^hanworks-air$' ]]; then
+    export PATH=$PATH:/usr/local/mysql/bin
+
 else
 
 fi
