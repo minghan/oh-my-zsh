@@ -65,6 +65,7 @@ elif [[ $HOSTNAME =~ '^hanworks$' ]]; then
 
 elif [[ $HOSTNAME =~ '^hanworks-air$' ]]; then
     export PATH=$PATH:/usr/local/mysql/bin
+    alias vi='vim'
 
 else
 
